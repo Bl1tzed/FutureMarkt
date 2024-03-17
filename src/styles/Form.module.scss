@@ -143,3 +143,22 @@
 .personalInfoCheckbox:checked ~ .personalInfoCheckmark:after {
   display: block;
 }
+
+.buttonIconImageMobile {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+
+.buttonIconImageDesktop {
+  position: absolute;
+  bottom: 1.3rem;
+  right: 1.3rem;
+  display: none;
+  @media screen and (min-width: 1280px) {
+    display: block;
+  }
+}
