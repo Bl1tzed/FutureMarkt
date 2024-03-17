@@ -1,0 +1,64 @@
+@import "variables.scss";
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100svh;
+  width: 100svw;
+  z-index: 3;
+  display: none;
+  backdrop-filter: blur(7px);
+}
+
+.modalEnter {
+  display: block;
+  opacity: 0;
+}
+
+.modalEnterActive {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.modalEnterDone {
+  display: block;
+}
+
+.modalExit {
+  display: block;
+  opacity: 1;
+}
+
+.modalExitActive {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.modalExitDone {
+  display: none;
+}
+
+.modalBlurBackground {
+  height: 100%;
+  width: 100%;
+  background-color: $modalBackground;
+}
+
+.modalWindow {
+  max-width: 61rem;
+  background-color: $color_3;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.modalCloseButton {
+  background-color: transparent;
+  border: 0;
+  margin-left: auto;
+  margin-top: 2.4rem;
+  margin-right: 2.4rem;
+  cursor: pointer;
+}

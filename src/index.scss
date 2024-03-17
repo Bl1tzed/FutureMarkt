@@ -1,0 +1,16 @@
+@import "styles/normalize.css";
+@import "styles/variables.scss";
+
+:root {
+  background-color: #242424;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 16px;
+  color: $textColor_1;
+}

@@ -1,0 +1,227 @@
+@import "variables.scss";
+
+.background {
+  height: 100svh;
+  background-image: url("../assets/Rectangle\ 260.png");
+  box-shadow: inset 0 0 0 100svh rgba($color_1, 0.87);
+}
+
+.contentWrapper {
+  padding: 1rem 1.5rem;
+  margin: auto;
+  max-width: 60rem;
+  @media screen and (min-width: 1280px) {
+    padding: 4rem 0 0 0;
+    max-width: 132rem;
+  }
+}
+
+.hero {
+  margin-top: 6.5rem;
+  position: relative;
+  z-index: 1;
+  @media screen and (min-width: 1280px) {
+    margin-top: 17.5rem;
+  }
+}
+
+.hero > .heroHeader {
+  max-width: 26rem;
+  font-size: 2.5rem;
+  line-height: 3.4rem;
+  position: relative;
+  z-index: 2;
+  @media screen and (min-width: 1280px) {
+    font-size: 6.5rem;
+    max-width: 74rem;
+    line-height: 8.8rem;
+  }
+}
+
+.hero > .heroSubHeader {
+  color: $textColor_2;
+  max-width: 15.4rem;
+  font-size: 1.1rem;
+  line-height: 1.65rem;
+  margin-top: 3.5rem;
+  position: relative;
+  z-index: 2;
+  @media screen and (min-width: 1280px) {
+    max-width: 65rem;
+    line-height: 2.4rem;
+    margin-top: 5.3rem;
+    font-size: 1.6rem;
+    &::after {
+      content: attr(data-text);
+      user-select: auto;
+    }
+    & > span {
+      display: none;
+    }
+  }
+}
+
+// .hero > .heroSubHeaderMobile {
+//   position: relative;
+//
+//   color: $textColor_2;
+
+//   @media screen and (min-width: 1280px) {
+//     display: none;
+//   }
+// }
+
+.backline {
+  position: relative;
+  margin-left: 0.6rem;
+  &::before {
+    content: "";
+    top: 0;
+    left: -0.6rem;
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: $textColor_2;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-left: 2.4rem;
+    &::before {
+      left: -2.4rem;
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-top: 5rem;
+  width: 12.6rem;
+  position: relative;
+  z-index: 2;
+  @media screen and (min-width: 1280px) {
+    flex-direction: row;
+    width: 38rem;
+    gap: 4rem;
+  }
+}
+
+.buttons > .buttonSignUp {
+  background-color: $signupColor;
+  color: $color_2;
+  outline-color: $signupOutlineColor;
+  display: flex;
+  font-size: 1rem;
+  height: 3rem;
+  cursor: pointer;
+  @media screen and (min-width: 1280px) {
+    height: 7.1rem;
+    font-size: 1.8rem;
+  }
+}
+
+.buttons > .buttonOrder {
+  outline-color: $orderOutlineColor;
+  display: flex;
+  font-size: 1rem;
+  height: 3rem;
+  cursor: pointer;
+  @media screen and (min-width: 1280px) {
+    height: 7.1rem;
+    font-size: 1.8rem;
+  }
+}
+
+.buttonText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 9.8rem;
+  outline: 1px solid;
+  @media screen and (min-width: 1280px) {
+    width: 30.8rem;
+    &::after {
+      content: attr(data-text);
+    }
+    & > span {
+      display: none;
+    }
+  }
+}
+
+.buttonIcon {
+  position: relative;
+  outline: 1px solid;
+  width: 2.8rem;
+  @media screen and (min-width: 1280px) {
+    width: 7.2rem;
+  }
+}
+
+.buttonIconImageMobile {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+
+.buttonIconImageDesktop {
+  position: absolute;
+  bottom: 1.3rem;
+  right: 1.3rem;
+  display: none;
+  @media screen and (min-width: 1280px) {
+    display: block;
+  }
+}
+
+.heroImage {
+  position: absolute;
+  width: 27.5rem;
+  top: 3.5rem;
+  right: -10rem;
+  z-index: 0;
+  @media screen and (min-width: 1280px) {
+    top: -15.2rem;
+    width: 52.5rem;
+  }
+}
+
+.stats {
+  margin-top: 9.2rem;
+  display: flex;
+  gap: 1.1rem;
+  position: relative;
+  z-index: 2;
+  @media screen and (min-width: 1280px) {
+    margin-top: 11.2rem;
+    gap: 23rem;
+  }
+}
+
+.statNumber {
+  font-size: 1.6rem !important;
+  @media screen and (min-width: 1280px) {
+    font-size: 4rem !important;
+  }
+}
+
+.statText {
+  width: 9.8rem;
+  color: $textColor_2;
+  width: 8.7rem;
+  font-size: 1rem !important;
+  @media screen and (min-width: 1280px) {
+    width: 16.6rem;
+    margin-top: 2.8rem;
+    font-size: 1.6rem !important;
+    &::after {
+      content: attr(data-text);
+    }
+    & > span {
+      display: none;
+    }
+  }
+}
