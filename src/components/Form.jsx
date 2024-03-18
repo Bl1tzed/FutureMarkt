@@ -56,12 +56,7 @@ export default function Form({ setShowFinal }) {
         onClick={() => validationHandler()}
         className={clsx(styles.modalButton, tpg.T1_Raleway)}
       >
-        <div
-          className={styles.modalButtonText}
-          data-text="Записаться на консультацию"
-        >
-          <span>Записаться</span>
-        </div>
+        <div className={styles.modalButtonText}>Заказать обратный звонок</div>
         <div className={styles.modalButtonIcon}>
           <img
             className={styles.buttonIconImageMobile}

@@ -38,7 +38,7 @@
   }
 }
 
-.hero > .heroSubHeader {
+.hero > .heroSubHeaderMobile {
   color: $textColor_2;
   max-width: 15.4rem;
   font-size: 1.1rem;
@@ -46,30 +46,25 @@
   margin-top: 3.5rem;
   position: relative;
   z-index: 2;
+
   @media screen and (min-width: 1280px) {
-    max-width: 65rem;
-    line-height: 2.4rem;
-    margin-top: 5.3rem;
-    font-size: 1.6rem;
-    &::after {
-      content: attr(data-text);
-      user-select: auto;
-    }
-    & > span {
-      display: none;
-    }
+    display: none;
   }
 }
 
-// .hero > .heroSubHeaderMobile {
-//   position: relative;
-//
-//   color: $textColor_2;
-
-//   @media screen and (min-width: 1280px) {
-//     display: none;
-//   }
-// }
+.hero > .heroSubHeaderDesktop {
+  position: relative;
+  max-width: 65rem;
+  line-height: 2.4rem;
+  margin-top: 5.3rem;
+  font-size: 1.6rem;
+  color: $textColor_2;
+  z-index: 2;
+  display: none;
+  @media screen and (min-width: 1280px) {
+    display: block;
+  }
+}
 
 .backline {
   position: relative;
@@ -132,20 +127,25 @@
   }
 }
 
-.buttonText {
+.buttonTextDesktop {
+  align-items: center;
+  justify-content: center;
+  width: 30.8rem;
+  outline: 1px solid;
+  display: none;
+  @media screen and (min-width: 1280px) {
+    display: flex;
+  }
+}
+
+.buttonTextMobile {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 9.8rem;
   outline: 1px solid;
   @media screen and (min-width: 1280px) {
-    width: 30.8rem;
-    &::after {
-      content: attr(data-text);
-    }
-    & > span {
-      display: none;
-    }
+    display: none;
   }
 }
 
@@ -201,27 +201,32 @@
   }
 }
 
-.statNumber {
-  font-size: 1.6rem !important;
+.statTecniques > .statNumber,
+.statProductivity > .statNumber {
+  font-size: 1.6rem;
   @media screen and (min-width: 1280px) {
-    font-size: 4rem !important;
+    font-size: 4rem;
   }
 }
 
-.statText {
-  width: 9.8rem;
+.statTecniques > .statTextDesktop,
+.statProductivity > .statTextDesktop {
+  width: 16.6rem;
+  margin-top: 2.8rem;
+  font-size: 1.6rem;
+  color: $textColor_2;
+  display: none;
+  @media screen and (min-width: 1280px) {
+    display: block;
+  }
+}
+
+.statTecniques > .statTextMobile,
+.statProductivity > .statTextMobile {
   color: $textColor_2;
   width: 8.7rem;
-  font-size: 1rem !important;
+  font-size: 1rem;
   @media screen and (min-width: 1280px) {
-    width: 16.6rem;
-    margin-top: 2.8rem;
-    font-size: 1.6rem !important;
-    &::after {
-      content: attr(data-text);
-    }
-    & > span {
-      display: none;
-    }
+    display: none;
   }
 }

@@ -43,15 +43,23 @@ function App() {
             </div>
             <div
               className={clsx(
-                styles.heroSubHeader,
+                styles.heroSubHeaderMobile,
                 tpg.T2_Raleway,
                 styles.backline
               )}
-              data-text="Когда ваше время и энергия лучше сфокусированы, стремление к новым
-              возможностям становится реальностью, ваш успех зависит от ваших
-              действий"
             >
-              <span>Ваш успех зависит от ваших действий</span>
+              Ваш успех зависит от ваших действий
+            </div>
+            <div
+              className={clsx(
+                styles.heroSubHeaderDesktop,
+                tpg.T2_Raleway,
+                styles.backline
+              )}
+            >
+              Когда ваше время и энергия лучше сфокусированы, стремление к новым
+              возможностям становится реальностью, ваш успех зависит от ваших
+              действий
             </div>
             <div className={styles.buttons}>
               <div
@@ -59,11 +67,9 @@ function App() {
                 onClick={() => setIsModalOpen(!isModalOpen)}
                 className={clsx(styles.buttonSignUp, tpg.T1_Raleway)}
               >
-                <div
-                  className={styles.buttonText}
-                  data-text="Записаться на консультацию"
-                >
-                  <span>Записаться</span>
+                <div className={styles.buttonTextMobile}>Записаться</div>
+                <div className={styles.buttonTextDesktop}>
+                  Записаться на консультацию
                 </div>
                 <div className={styles.buttonIcon}>
                   <img
@@ -83,11 +89,9 @@ function App() {
                 onClick={() => setIsModalOpen(!isModalOpen)}
                 className={clsx(styles.buttonOrder, tpg.T1_Raleway)}
               >
-                <div
-                  className={styles.buttonText}
-                  data-text="Бесплатная консультация"
-                >
-                  <span>Заказать звонок</span>
+                <div className={styles.buttonTextMobile}>Заказать звонок</div>
+                <div className={styles.buttonTextDesktop}>
+                  Бесплатная консультация
                 </div>
                 <div className={styles.buttonIcon}>
                   <img
@@ -108,22 +112,22 @@ function App() {
                 <div className={clsx(styles.statNumber, tpg.T1_Montserrat)}>
                   {sumOfDate + 1}+
                 </div>
-                <div
-                  className={clsx(styles.statText, tpg.T2_Raleway)}
-                  data-text="техник для достижения целей"
-                >
-                  <span>техники</span>
+                <div className={clsx(styles.statTextDesktop, tpg.T2_Raleway)}>
+                  техник для достижения целей
+                </div>
+                <div className={clsx(styles.statTextMobile, tpg.T2_Raleway)}>
+                  техники
                 </div>
               </div>
               <div className={clsx(styles.statProductivity, styles.backline)}>
                 <div className={clsx(styles.statNumber, tpg.T1_Montserrat)}>
                   {value}%
                 </div>
-                <div
-                  className={clsx(styles.statText, tpg.T2_Raleway)}
-                  data-text="увеличение личной продуктивности"
-                >
-                  <span>продуктивности</span>
+                <div className={clsx(styles.statTextDesktop, tpg.T2_Raleway)}>
+                  увеличение личной продуктивности
+                </div>
+                <div className={clsx(styles.statTextMobile, tpg.T2_Raleway)}>
+                  продуктивности
                 </div>
               </div>
             </div>

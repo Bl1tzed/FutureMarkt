@@ -9,8 +9,6 @@ export default function Modal({ isModalOpen, setIsModalOpen }) {
   const nodeRef = useRef(null);
   const [showFinal, setShowFinal] = useState(false);
 
-  console.log(showFinal);
-
   return (
     <CSSTransition
       nodeRef={nodeRef}
